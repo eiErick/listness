@@ -1,0 +1,12 @@
+<div class="task">
+    @if (task.checked) {
+        <div class="checked">
+            <input type="checkbox" checked #checkboxTask (click)="callCheckTask(task.id)">{{task.name}}
+        </div>
+    } @else {
+        <div>    
+            <input type="checkbox" #checkboxTask (click)="callCheckTask(task.id)">{{task.name}}
+        </div>
+    }
+    <span class="trash" (click)="deleteTask(task.id)"><mat-icon aria-hidden="false" aria-label="trash" fontIcon="delete"></mat-icon></span>
+</div>

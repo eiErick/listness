@@ -1,0 +1,9 @@
+.header {
+    max-width: 800px;
+    padding: 10px;
+    margin: auto;
+}
+
+.header input {
+    width: 100%;
+}

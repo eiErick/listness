@@ -1,0 +1,27 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 10px;
+    padding: 6px 16px;
+    border-radius: 10px;
+}
+
+.task .checked {
+    text-decoration: line-through;
+}
+
+.task div {
+    display: flex;
+    gap: 10px;
+}
+
+.task .trash {
+    cursor: pointer;
+}
+
+.task input {
+    cursor: pointer;
+}

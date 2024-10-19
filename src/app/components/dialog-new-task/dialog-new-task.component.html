@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>New Task</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input class="inps" [(ngModel)]="animal" placeholder="Task..." />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="animal()" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

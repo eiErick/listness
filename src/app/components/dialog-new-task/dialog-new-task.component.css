@@ -1,0 +1,12 @@
+h2 {
+    margin: auto;
+}
+
+mat-dialog-content {
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px;
+}
