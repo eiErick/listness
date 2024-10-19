@@ -29,7 +29,7 @@ export class BtnAdd {
   }
 
   private addTaskEvent(task: Tasks): void {
-    this.tasks.emit(task);
+    if (task.name !== "") this.tasks.emit(task);
   }
 
   private makeId(): string {
