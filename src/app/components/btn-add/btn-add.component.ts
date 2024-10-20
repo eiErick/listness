@@ -26,7 +26,7 @@ export class BtnAdd {
     dialogRef.afterClosed().subscribe(result => {
       if (result !== undefined && result !== '') {
         this.task.set(result);
-        this.addTaskEvent({'name': this.task(), 'id': this.makeId(), checked: false});
+        this.addTaskEvent({'name': this.capitalizeFirstLetter(this.task()), 'id': this.makeId(), checked: false});
       }
     });
   }
@@ -37,6 +37,11 @@ export class BtnAdd {
 
   private makeId(): string {
     return Math.floor(Date.now() * Math.random()).toString(36);
+  }
+
+  private capitalizeFirstLetter(text: string): string {
+    if (!text) return text;
+    return text.charAt(0).toUpperCase() + text.slice(1);
   }
 }
 
