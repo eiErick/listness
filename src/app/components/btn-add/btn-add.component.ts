@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, inject, model, Output, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
+import { MatIcon } from '@angular/material/icon';
 import { DialogNewTaskComponent } from '../dialog-new-task/dialog-new-task.component';
 
 @Component({
   selector: 'app-btn-add',
   standalone: true,
-  imports: [MatButtonModule, DialogNewTaskComponent],
+  imports: [MatButtonModule, DialogNewTaskComponent, MatIcon],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './btn-add.component.html',
   styleUrl: './btn-add.component.css'
