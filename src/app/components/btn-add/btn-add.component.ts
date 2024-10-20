@@ -6,7 +6,7 @@ import { DialogNewTaskComponent } from '../dialog-new-task/dialog-new-task.compo
 @Component({
   selector: 'app-btn-add',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, DialogNewTaskComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './btn-add.component.html',
   styleUrl: './btn-add.component.css'
@@ -19,12 +19,14 @@ export class BtnAdd {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogNewTaskComponent, {
-      data: {task: this.task()},
+      data: this.task(),
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== undefined) this.task.set(result);
-      this.addTaskEvent({'name': this.task(), 'id': this.makeId(), checked: false});
+      if (result !== undefined && result !== '') {
+        this.task.set(result);
+        this.addTaskEvent({'name': this.task(), 'id': this.makeId(), checked: false});
+      }
     });
   }
 
