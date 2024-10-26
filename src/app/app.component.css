@@ -9,6 +9,23 @@
 
 .tasks {
     max-width: 800px;
+    height: 80%;
     margin: auto;
     padding: 0 10px;
+}
+
+.empty {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.empty.dark p {
+    color: #fff;
 }

@@ -4,6 +4,11 @@
     <div class="tasks">
         @for (item of filteredTasks; track $index) {
             <app-task (taskCheckedId)="checkTask($event)" (taskDeleteId)="deleteTask($event)" [task]="item"></app-task>
+        } @empty {
+            <div [ngClass]="theme()" class="empty">
+                <p>Your task list is empy!</p>
+                <p>Click in "+" for add new task</p>
+            </div>
         }
     </div>
 </div>
