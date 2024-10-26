@@ -1,3 +1,12 @@
+.app {
+    height: 100%;
+    width: 100%;
+}
+
+.app.dark {
+    background-color: #181818;
+}
+
 .tasks {
     max-width: 800px;
     margin: auto;

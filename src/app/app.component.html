@@ -1,7 +1,9 @@
-<app-header (searchTerm)="search($event)"></app-header>
-<app-btn-add (tasks)="addTask($event)"></app-btn-add>
-<div class="tasks">
-    @for (item of filteredTasks; track $index) {
-        <app-task (taskCheckedId)="checkTask($event)" (taskDeleteId)="deleteTask($event)" [task]="item"></app-task>
-    }
+<div [ngClass]="theme()" class="app">
+    <app-header (searchTerm)="search($event)"></app-header>
+    <app-btn-add (tasks)="addTask($event)"></app-btn-add>
+    <div class="tasks">
+        @for (item of filteredTasks; track $index) {
+            <app-task (taskCheckedId)="checkTask($event)" (taskDeleteId)="deleteTask($event)" [task]="item"></app-task>
+        }
+    </div>
 </div>

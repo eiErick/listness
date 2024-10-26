@@ -9,6 +9,11 @@
     border-radius: 10px;
 }
 
+.task.dark {
+    background-color: #252525;
+    color: #ffffff;
+}
+
 .task .checked {
     text-decoration: line-through;
 }

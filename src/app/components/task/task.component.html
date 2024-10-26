@@ -1,4 +1,4 @@
-<div class="task">
+<div [ngClass]="theme()" class="task">
     @if (task.checked) {
         <div class="checked">
             <input type="checkbox" checked #checkboxTask (click)="callCheckTask(task.id)">{{task.name}}

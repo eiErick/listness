@@ -1,5 +1,20 @@
+.dialog {
+    height: 100%;
+    width: 100%;
+}
+
+.dialog.dark {
+    background-color: #252525;
+    color: #fff;
+}
+
 h2 {
-    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h2.dark {
+    color: #fff;
 }
 
 mat-dialog-content {
