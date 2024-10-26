@@ -4,7 +4,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { BtnAdd, Tasks } from "./components/btn-add/btn-add.component"
 import { DialogNewTaskComponent } from "./components/dialog-new-task/dialog-new-task.component";
 import { CheckTask, TaskComponent } from "./components/task/task.component";
-import { StorageService } from './service/storage.service';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'app-root',
