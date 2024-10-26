@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "electron": "ng build --base-href ./ && electron . --trace-warnings",
-    "electron-build": "ng build && electron-builder"
+    "electron-build": "ng build && electron-builder",
+    "deploy": "ng deploy --base-href=/listness/ --branch='web'"
   },
   "build": {
     "icon": "./dist/listness/browser/build/icon/",
