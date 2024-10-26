@@ -10,10 +10,10 @@ import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular
 export class HeaderComponent {
   @Output() searchTerm = new EventEmitter<string>()
   
-  @ViewChild('search') searchElement!: ElementRef;
+  @ViewChild('inp') inpName!: ElementRef;
   
   public callSearch() {
-    const term: string = this.searchElement.nativeElement.value;
+    const term: string = this.inpName.nativeElement.value;
     this.searchTerm.emit(term);
   }
 }
