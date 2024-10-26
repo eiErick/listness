@@ -33,6 +33,10 @@ export class DialogNewTaskComponent {
   readonly task = inject<{name: string}>(MAT_DIALOG_DATA);
   readonly taskName = model(this.task.name);
 
+  public callAddNewTask(): void {
+    this.dialogRef.close(this.taskName());
+  }
+
   onNoClick(): void {
     this.dialogRef.close();
   }

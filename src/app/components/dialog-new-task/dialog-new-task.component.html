@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>New Task</h2>
 <mat-dialog-content>
-  <input class="inps" [(ngModel)]="taskName" placeholder="Task..." />
+  <input class="inps" (keyup.enter)="callAddNewTask()" [(ngModel)]="taskName" placeholder="Task..." />
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
