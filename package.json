@@ -1,13 +1,37 @@
 {
   "name": "listness",
   "version": "0.0.0",
+  "main": "main.js",
+  "description": "A simple app of to do list",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "ng build --base-href ./ && electron . --trace-warnings",
+    "electron-build": "ng build && electron-builder"
   },
+  "build": {
+    "icon": "./dist/listness/browser/build/icon/",
+    "productName": "listness",
+    "linux": {
+      "target": [
+        "snap",
+        "AppImage"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eiErick/listness.git"
+  },
+  "author": "Érick",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/eiErick/listness/issues"
+  },
+  "homepage": "https://github.com/eiErick/listness#readme",
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
@@ -29,6 +53,9 @@
     "@angular/cli": "^18.2.5",
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
+    "electron": "^33.0.1",
+    "electron-builder": "^25.1.8",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
