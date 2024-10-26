@@ -11,7 +11,7 @@
     "test": "ng test",
     "electron": "ng build --base-href ./ && electron . --trace-warnings",
     "electron-build": "ng build && electron-builder",
-    "deploy": "ng deploy --base-href=/listness/ --branch='web'"
+    "deploy": "ng build && ng deploy --base-href=/listness/ --branch='web'"
   },
   "build": {
     "icon": "./dist/listness/browser/build/icon/",
